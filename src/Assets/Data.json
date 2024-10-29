@@ -1,0 +1,240 @@
+ [
+    {
+        "id": 1,
+        "title": "Fix login page error",
+        "description": "Resolve the bug that causes login failure on incorrect password entry.",
+        "priority": "High", 
+        "status": "Open", 
+        "assignee": "John Doe", 
+        "createdAt": "2024-10-26T10:00:00Z",
+        "updatedAt": "2024-10-26T12:30:00Z",
+        "dueDate": "2024-10-28T23:59:00Z",
+        "timeSpent": 2.5, 
+        "tags": [
+            "bug",
+            "login",
+            "frontend"
+        ], 
+        "comments": [
+            {
+                "commentId": 1,
+                "commenter": "Jane Smith",
+                "text": "Noted the error occurs when the password field is left empty.",
+                "createdAt": "2024-10-26T11:00:00Z"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Implement new task creation feature",
+        "description": "Create functionality for adding new tasks to the dashboard.",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assignee": "Alice Brown",
+        "createdAt": "2024-10-25T08:00:00Z",
+        "updatedAt": "2024-10-26T10:15:00Z",
+        "dueDate": "2024-10-29T23:59:00Z",
+        "timeSpent": 1.0,
+        "tags": [
+            "feature",
+            "dashboard"
+        ],
+        "comments": []
+    },
+    {
+        "id": 3,
+        "title": "Optimize database queries",
+        "description": "Improve performance by optimizing queries in the reporting module.",
+        "priority": "High",
+        "status": "In Progress",
+        "assignee": "Samuel Green",
+        "createdAt": "2024-10-24T14:30:00Z",
+        "updatedAt": "2024-10-26T09:20:00Z",
+        "dueDate": "2024-10-30T23:59:00Z",
+        "timeSpent": 3.5,
+        "tags": [
+            "backend",
+            "performance"
+        ],
+        "comments": []
+    },
+    {
+        "id": 4,
+        "title": "Update user profile layout",
+        "description": "Revamp the user profile layout to improve UI consistency across pages.",
+        "priority": "Medium",
+        "status": "Open",
+        "assignee": "Karen White",
+        "createdAt": "2024-10-22T11:00:00Z",
+        "updatedAt": "2024-10-22T11:00:00Z",
+        "dueDate": "2024-10-28T23:59:00Z",
+        "timeSpent": 0,
+        "tags": [
+            "frontend",
+            "UI",
+            "user profile"
+        ],
+        "comments": [
+            {
+                "commentId": 2,
+                "commenter": "Alice Brown",
+                "text": "Ensure compatibility with existing components.",
+                "createdAt": "2024-10-22T11:15:00Z"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Add email notifications for task updates",
+        "description": "Implement email notifications for users assigned to tasks.",
+        "priority": "High",
+        "status": "In Progress",
+        "assignee": "John Doe",
+        "createdAt": "2024-10-20T10:00:00Z",
+        "updatedAt": "2024-10-24T13:45:00Z",
+        "dueDate": "2024-10-31T23:59:00Z",
+        "timeSpent": 2.0,
+        "tags": [
+            "notifications",
+            "backend"
+        ],
+        "comments": [
+            {
+                "commentId": 3,
+                "commenter": "Jane Smith",
+                "text": "Need to test with different email providers.",
+                "createdAt": "2024-10-21T10:30:00Z"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Fix footer alignment issue",
+        "description": "Resolve footer alignment on mobile screens.",
+        "priority": "Low",
+        "status": "Completed",
+        "assignee": "Alice Brown",
+        "createdAt": "2024-10-19T08:30:00Z",
+        "updatedAt": "2024-10-20T16:00:00Z",
+        "dueDate": "2024-10-22T23:59:00Z",
+        "timeSpent": 1.5,
+        "tags": [
+            "frontend",
+            "UI",
+            "mobile"
+        ],
+        "comments": []
+    },
+    {
+        "id": 7,
+        "title": "Refactor authentication flow",
+        "description": "Simplify authentication logic and enhance security.",
+        "priority": "High",
+        "status": "Open",
+        "assignee": "Samuel Green",
+        "createdAt": "2024-10-23T12:00:00Z",
+        "updatedAt": "2024-10-23T12:00:00Z",
+        "dueDate": "2024-11-05T23:59:00Z",
+        "timeSpent": 0,
+        "tags": [
+            "backend",
+            "authentication",
+            "security"
+        ],
+        "comments": []
+    },
+    {
+        "id": 8,
+        "title": "Implement dark mode toggle",
+        "description": "Add a dark mode option for better accessibility at night.",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assignee": "Karen White",
+        "createdAt": "2024-10-22T09:00:00Z",
+        "updatedAt": "2024-10-25T10:00:00Z",
+        "dueDate": "2024-10-29T23:59:00Z",
+        "timeSpent": 1.5,
+        "tags": [
+            "frontend",
+            "UI",
+            "accessibility"
+        ],
+        "comments": [
+            {
+                "commentId": 4,
+                "commenter": "John Doe",
+                "text": "Ensure consistency with the light mode theme.",
+                "createdAt": "2024-10-24T12:00:00Z"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Add pagination to task list",
+        "description": "Improve task list load time by implementing pagination.",
+        "priority": "Medium",
+        "status": "Open",
+        "assignee": "Alice Brown",
+        "createdAt": "2024-10-24T07:45:00Z",
+        "updatedAt": "2024-10-24T07:45:00Z",
+        "dueDate": "2024-10-31T23:59:00Z",
+        "timeSpent": 0,
+        "tags": [
+            "backend",
+            "performance"
+        ],
+        "comments": []
+    },
+    {
+        "id": 10,
+        "title": "Improve task search functionality",
+        "description": "Enhance search accuracy with filters for priority and status.",
+        "priority": "Low",
+        "status": "Completed",
+        "assignee": "Karen White",
+        "createdAt": "2024-10-15T09:00:00Z",
+        "updatedAt": "2024-10-20T14:30:00Z",
+        "dueDate": "2024-10-20T23:59:00Z",
+        "timeSpent": 3.0,
+        "tags": [
+            "frontend",
+            "search"
+        ],
+        "comments": []
+    },
+    {
+        "id": 11,
+        "title": "Create report export feature",
+        "description": "Allow users to export task reports as CSV files.",
+        "priority": "High",
+        "status": "Open",
+        "assignee": "Samuel Green",
+        "createdAt": "2024-10-26T08:15:00Z",
+        "updatedAt": "2024-10-26T08:15:00Z",
+        "dueDate": "2024-11-10T23:59:00Z",
+        "timeSpent": 0,
+        "tags": [
+            "backend",
+            "reporting",
+            "export"
+        ],
+        "comments": []
+    },
+    {
+        "id": 12,
+        "title": "Add task category tags",
+        "description": "Enable task categorization by adding a tag system.",
+        "priority": "Medium",
+        "status": "In Progress",
+        "assignee": "John Doe",
+        "createdAt": "2024-10-17T11:45:00Z",
+        "updatedAt": "2024-10-24T09:30:00Z",
+        "dueDate": "2024-10-30T23:59:00Z",
+        "timeSpent": 2.5,
+        "tags": [
+            "frontend",
+            "categorization"
+        ],
+        "comments": []
+    }
+]
