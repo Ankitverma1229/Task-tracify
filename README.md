@@ -59,6 +59,7 @@ npm run start
 ## Technology Stack
 
 - **Frontend Framework:** React.js
+- **Table Library:** TanStack Table
 - **State Management:** ReduxToolKit 
 - **Styling:** Tailwind CSS
 - **API:** Mock authentication and task management API
