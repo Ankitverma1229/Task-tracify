@@ -20,6 +20,7 @@ TaskTrackify utilizes React.js as the frontend framework, with a state managemen
 ### 📊 Dashboard Insights
 
 - Users can search tasks based on names, title, status of project, date and time spent.
+- Users can create new tasks with details such as Title, Status, Assignee, Due date, time spend and tags.
 - The dashboard allows for filtering and sorting tasks based on different criteria.
 
 ### ⏱ Time Tracking
