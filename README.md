@@ -57,10 +57,10 @@ npm run start
 
 ## Technology Stack
 
--**Frontend Framework:** React.js
--**State Management:** Redux 
--**Styling:** Tailwind CSS
--**API:** Mock authentication and task management API
+- **Frontend Framework:** React.js
+- **State Management:** ReduxToolKit 
+- **Styling:** Tailwind CSS
+- **API:** Mock authentication and task management API
 
 ## Contact
 
