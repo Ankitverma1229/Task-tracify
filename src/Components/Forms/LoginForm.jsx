@@ -9,7 +9,7 @@ export default function LoginForm() {
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-   const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
     const handleFormChange = (e) => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
@@ -27,7 +27,7 @@ export default function LoginForm() {
                 setLoading(false);
             } else {
                 toast.success('Login Successful !!');
-                dispatch(setUserEmail(formData.userName)); // Store email in Redux
+                dispatch(setUserEmail(formData.userName));
                 setLoading(false);
                 navigate('/home');
             }
@@ -37,7 +37,7 @@ export default function LoginForm() {
 
     return (
         <div className='w-full flex justify-center items-center h-screen bg-gray-100'>
-            <form onSubmit={handleSubmit} className="bg-white p-8 w-[90%] max-w-md rounded-lg shadow-lg">
+            <form onSubmit={handleSubmit} className="bg-white p-5 md:p-8 w-[90%] max-w-md rounded-lg shadow-lg">
                 <h2 className="text-3xl font-semibold text-center mb-2 text-blue-600">Login</h2>
                 <p className="text-sm text-gray-500 text-center mb-6">
                     Test ID: <span className="font-semibold">user@gmail.com</span> | Password: <span className="font-semibold">pass@123</span>
@@ -84,7 +84,7 @@ export default function LoginForm() {
                         </div>
 
                     ) : (
-                        <span className='text-center font-semibold text-lg'>Login</span> 
+                        <span className='text-center font-semibold text-lg'>Login</span>
                     )}
 
                 </button>

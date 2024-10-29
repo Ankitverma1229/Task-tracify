@@ -14,7 +14,7 @@ const TaskModal = ({ selectedRow, setSelectedRow, onSave, onClose, onDelete }) =
 
     return (
         <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+            <div className="bg-white p-3 md:p-6 rounded-lg shadow-lg w-full mx-2 md:mx-0 max-w-md">
                 <h2 className="text-xl font-semibold mb-4">Edit Task</h2>
                 <div className="space-y-4">
                     <div>
@@ -55,7 +55,7 @@ const TaskModal = ({ selectedRow, setSelectedRow, onSave, onClose, onDelete }) =
                     </button>
                 </div>
 
-                <div className="mt-4 flex justify-end">
+                <div className="mt-4 flex justify-between md:justify-end">
                     <button
                         onClick={onSave}
                         className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 mr-2"

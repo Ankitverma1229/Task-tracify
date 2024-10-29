@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { useReactTable, createColumnHelper, flexRender, getCoreRowModel, getSortedRowModel, getFilteredRowModel, getPaginationRowModel } from '@tanstack/react-table';
-import { ArrowUpDown, Captions, ChartSpline, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Hourglass, Search, Tag, TrendingDown, TrendingUp, User, UserCheckIcon } from 'lucide-react';
+import { ArrowUpDown, Captions, ChartSpline, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Hourglass, Plus, Search, Tag, TrendingDown, TrendingUp, User, UserCheckIcon } from 'lucide-react';
 import mockData from "../../Assets/Data.json";
 import TaskModal from './TaskModal';
 import { toast } from 'react-toastify';
+import CreateTaskModal from './CreateTaskModal';
 
 const columnHelper = createColumnHelper();
 
@@ -95,7 +96,7 @@ const columns = [
 
   columnHelper.accessor("tags", {
     cell: (info) => {
-      const tags = info.getValue();
+      const tags = info.getValue() || [];
       return (
         <div className="flex gap-2 max-w-[100%] overflow-x-auto no-scrollbar">
           {tags.map((tag, index) => (
@@ -124,6 +125,7 @@ const TaskTableUI = () => {
   const [globalFilter, setGlobalFilter] = useState("");
   const [selectedRow, setSelectedRow] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
 
   const table = useReactTable({
     data,
@@ -161,9 +163,22 @@ const TaskTableUI = () => {
     toast.success("Task deleted successfully")
   };
 
+  const createTask = (newTask) => {
+    const newId = data.length > 0 ? Math.max(...data.map(task => task.id)) + 1 : 1;
+    const newTaskData = {
+      ...newTask,
+      id: newId,
+      createdAt: new Date().toISOString(),
+    };
+
+    setData((prevData) => [...prevData, newTaskData]);
+    setIsCreateModalOpen(false);
+    toast.success("New task created successfully!");
+  };
+
   return (
     <div className='flex flex-col min-h-screen min-w-[90%] mx-auto py-2 md:py-12  '>
-      <div className='mb-4 relative'>
+      <div className=' relative'>
         <input
           value={globalFilter ?? ""}
           onChange={(e) => setGlobalFilter(e.target.value)}
@@ -173,6 +188,12 @@ const TaskTableUI = () => {
         <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400' size={20} />
 
       </div>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded-md flex items-center w-fit my-3"
+        onClick={() => setIsCreateModalOpen(true)}
+      >
+        <Plus className="mr-2" size={18} /> Create Task
+      </button>
       <div className='overflow-x-auto no-scrollbar bg-white shadow-md rounded-lg'>
         <table className='min-w-full divide-y divide-gray-200'>
           <thead className='bg-gray-50'>
@@ -222,7 +243,7 @@ const TaskTableUI = () => {
 
       </div>
 
-      <div className='flex flex-col sm:flex-row justify-between items-center mt-4 text-sm text-gray-700'>
+      <div className='flex flex-col sm:flex-row justify-between items-center mt-10 md:mt-4 text-sm text-gray-700'>
         <div className='flex items-center mb-4 sm:mb-0'>
           <span className='mr-2'>Items per page</span>
           <select
@@ -294,6 +315,13 @@ const TaskTableUI = () => {
           onSave={handleSaveChanges}
           onDelete={() => handleDeleteTask(selectedRow.id)}
           onClose={() => setIsModalOpen(false)}
+        />
+      )}
+
+      {isCreateModalOpen && (
+        <CreateTaskModal
+          onSave={createTask}
+          onClose={() => setIsCreateModalOpen(false)}
         />
       )}
     </div>
